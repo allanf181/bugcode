@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:minHeight="?attr/actionBarSize" android:theme="?attr/actionBarTheme"
+        app:menu="@menu/menu_cadastrar" app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24"
+        app:title="@string/btn_cadastro" app:titleTextColor="#FFFFFF"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".LoginActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/home">
+
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/login_top"
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="10dp"/>
+
+            <include
+                android:id="@+id/include2"
+                layout="@layout/cadastro_body"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                tools:layout_editor_absoluteX="9dp"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="250dp"
+                android:layout_height="122dp"
+                app:layout_constraintBottom_toTopOf="@+id/include2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo_bugcode"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</LinearLayout>
